@@ -1,0 +1,4 @@
+marketplace_id,marketplace_name,commission_rate,order_share
+MP-A,Marketplace A,0.18,0.45
+MP-B,Marketplace B,0.15,0.35
+MP-C,Marketplace C,0.22,0.2

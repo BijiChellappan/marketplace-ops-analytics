@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marketplace Ops Dashboard</title>
+<style>
+  :root {
+    --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+    --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10);
+    --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a;
+    --good: #006300; --critical: #d03b3b; --warning: #b07a00; --serious: #c4602f;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+      --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+      --s1: #3987e5; --s2: #d95926; --s3: #199e70; --good: #0ca30c; --warning: #fab219; --serious: #ec835a;
+    }
+  }
+  :root[data-theme="dark"] {
+    --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10);
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --good: #0ca30c; --warning: #fab219; --serious: #ec835a;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--page); color: var(--ink);
+         font: 15px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 1120px; margin: 0 auto; padding: 32px 16px 56px; }
+  header h1 { font-size: 26px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  header p { margin: 0; color: var(--ink-2); }
+  .note { display: inline-block; margin-top: 10px; font-size: 12.5px; color: var(--muted);
+          border: 1px solid var(--border); border-radius: 999px; padding: 2px 10px; }
+  h2 { font-size: 17px; margin: 0 0 2px; }
+  .sub { color: var(--ink-2); font-size: 13.5px; margin: 0 0 14px; }
+  section { margin-top: 28px; }
+  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+  .tile, .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; }
+  .tile { padding: 14px 16px; }
+  .tile .label { color: var(--ink-2); font-size: 13px; }
+  .tile .value { font-size: 26px; font-weight: 650; margin: 2px 0; font-variant-numeric: tabular-nums; }
+  .delta { font-size: 12.5px; }
+  .delta.up { color: var(--good); } .delta.down { color: var(--critical); } .delta.flat { color: var(--muted); }
+  .insights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .insight { padding: 16px; }
+  .insight b { display: block; font-size: 22px; margin-bottom: 2px; font-variant-numeric: tabular-nums; }
+  .insight span { color: var(--ink-2); font-size: 13.5px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .card { padding: 18px; min-width: 0; overflow-x: auto; }
+  .chart { position: relative; height: 260px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  th { text-align: left; color: var(--muted); font-weight: 500; padding: 6px 8px; border-bottom: 1px solid var(--axis); }
+  td { padding: 7px 8px; border-bottom: 1px solid var(--grid); }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .sev { font-weight: 600; text-transform: capitalize; }
+  .sev.high { color: var(--critical); } .sev.medium { color: var(--serious); } .sev.low { color: var(--muted); }
+  .callout { margin-top: 12px; padding: 10px 12px; border-left: 3px solid var(--s1); background: var(--page);
+             border-radius: 0 8px 8px 0; font-size: 13.5px; color: var(--ink-2); }
+  .verdict { font-weight: 650; color: var(--ink); }
+  details { margin-top: 10px; font-size: 13px; color: var(--ink-2); }
+  summary { cursor: pointer; }
+  footer { margin-top: 36px; color: var(--muted); font-size: 12.5px; }
+  @media (max-width: 820px) {
+    .tiles { grid-template-columns: repeat(2, 1fr); }
+    .insights, .grid2 { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Marketplace Operations Dashboard</h1>
+    <p>{{BUSINESS}} · {{SUBTITLE}}</p>
+    <span class="note">Portfolio case study by {{AUTHOR}} · {{DATA_NOTE}}</span>
+  </header>
+
+  <section>
+    <h2>{{MONTH}} at a glance</h2>
+    <p class="sub">All marketplaces combined. Contribution = product margin − marketplace commission − fulfilment − discounts.</p>
+    <div class="tiles">{{TILES}}</div>
+  </section>
+
+  <section>
+    <h2>Three things to act on</h2>
+    <p class="sub">What the analysis found, and what it means.</p>
+    <div class="insights">
+      <div class="card insight"><b>{{EXP_HEAD}}</b><span>{{EXP_TEXT}}</span></div>
+      <div class="card insight"><b>{{CAUSE_HEAD}}</b><span>{{CAUSE_TEXT}}</span></div>
+      <div class="card insight"><b>{{WEAK_HEAD}}</b><span>{{WEAK_TEXT}}</span></div>
+    </div>
+  </section>
+
+  <section class="grid2">
+    <div class="card">
+      <h2>Orders per month</h2>
+      <p class="sub">By marketplace</p>
+      <div class="chart"><canvas id="ordersChart" aria-label="Line chart of monthly orders by marketplace" role="img"></canvas></div>
+      <details><summary>Show as table</summary>
+        <table><thead><tr><th>Month</th>{{MP_HEADERS}}</tr></thead>
+        <tbody>{{ORDERS_TABLE}}</tbody></table></details>
+    </div>
+    <div class="card">
+      <h2>Contribution per order, {{MONTH}}</h2>
+      <p class="sub">€ per delivered order, after commission, fulfilment and discounts</p>
+      <div class="chart"><canvas id="cpoChart" aria-label="Bar chart of contribution per order by marketplace" role="img"></canvas></div>
+    </div>
+  </section>
+
+  <section class="grid2">
+    <div class="card">
+      <h2>Why hubs go offline</h2>
+      <p class="sub">Estimated orders lost per root cause, {{PERIOD}}</p>
+      <div class="chart"><canvas id="causeChart" aria-label="Bar chart of estimated lost orders by offline reason" role="img"></canvas></div>
+    </div>
+    <div class="card">
+      <h2>Today's catalog &amp; availability check</h2>
+      <p class="sub">{{ISSUE_TOTAL}} issues found automatically, routed to an owner</p>
+      <table><thead><tr><th>Severity</th><th>Issue</th><th class="num">Count</th><th>Owner</th></tr></thead>
+      <tbody>{{ISSUE_ROWS}}</tbody></table>
+      <div class="callout"><b>Pattern:</b> {{PATTERN}}</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>{{EXP_TITLE}}</h2>
+    <p class="sub">{{EXP_SUB}}</p>
+    <div class="chart"><canvas id="expChart" aria-label="Line chart of weekly orders per hub-day, test versus control" role="img"></canvas></div>
+    <table style="margin-top:14px"><thead><tr><th>Metric (difference-in-differences)</th><th class="num">Effect</th><th class="num">95 % CI</th><th>Result</th></tr></thead>
+    <tbody>{{EXP_ROWS}}</tbody></table>
+    <div class="callout"><span class="verdict">Decision: {{VERDICT}}.</span>
+      With 50 % co-funding from the marketplace, the same promotion would lift contribution by about {{COFUND}} per hub-day.</div>
+  </section>
+
+  <section class="card">
+    <h2>Hub watchlist</h2>
+    <p class="sub">Last 4 weeks vs previous 4 weeks</p>
+    <table><thead><tr><th>Hub</th><th>Marketplace</th><th class="num">Orders change</th><th class="num">Uptime</th><th>Status</th></tr></thead>
+    <tbody>{{WATCH_ROWS}}</tbody></table>
+  </section>
+
+  <footer>Built with Python, SQL (SQLite) and Chart.js. {{FOOTER}}</footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+const D = {{DATA}};
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const charts = [];
+
+function draw() {
+  charts.forEach(c => c.destroy()); charts.length = 0;
+  const ink2 = css('--ink-2'), muted = css('--muted'), grid = css('--grid'), surface = css('--surface');
+  const S = [css('--s1'), css('--s2'), css('--s3')];
+  Chart.defaults.color = muted;
+  Chart.defaults.font.family = 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif';
+  const tooltip = { backgroundColor: css('--ink'), titleColor: surface, bodyColor: surface, padding: 10,
+                    cornerRadius: 8, displayColors: true, boxPadding: 4 };
+  const axes = (yTitle) => ({
+    x: { grid: { display: false }, border: { color: css('--axis') }, ticks: { color: muted } },
+    y: { grid: { color: grid }, border: { display: false }, ticks: { color: muted },
+         title: { display: !!yTitle, text: yTitle, color: muted } } });
+  const legend = { position: 'top', align: 'start', labels: { color: ink2, usePointStyle: true, boxWidth: 8, boxHeight: 8 } };
+
+  charts.push(new Chart(ordersChart, { type: 'line',
+    data: { labels: D.months, datasets: Object.entries(D.orders).map(([k, v], i) => ({
+      label: k, data: v, borderColor: S[i], backgroundColor: S[i], borderWidth: 2,
+      pointRadius: 4, pointHoverRadius: 6, pointBorderColor: surface, pointBorderWidth: 2, tension: 0.25 })) },
+    options: { maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
+      plugins: { legend, tooltip: { ...tooltip, callbacks: { label: c => ` ${c.dataset.label}: ${c.parsed.y.toLocaleString('en')}` } } },
+      scales: axes('Orders') } }));
+
+  charts.push(new Chart(cpoChart, { type: 'bar',
+    data: { labels: Object.keys(D.cpo), datasets: [{ label: 'Contribution per order (€)', data: Object.values(D.cpo),
+      backgroundColor: S[0], borderRadius: 4, borderSkipped: 'start', maxBarThickness: 56 }] },
+    options: { maintainAspectRatio: false, plugins: { legend: { display: false },
+      tooltip: { ...tooltip, callbacks: { label: c => ` €${c.parsed.y.toFixed(2)} per order` } } },
+      scales: axes('€ per order') } }));
+
+  charts.push(new Chart(causeChart, { type: 'bar',
+    data: { labels: D.causes.labels, datasets: [{ label: 'Estimated lost orders', data: D.causes.values,
+      backgroundColor: S[0], borderRadius: 4, borderSkipped: 'start', maxBarThickness: 28 }] },
+    options: { indexAxis: 'y', maintainAspectRatio: false, plugins: { legend: { display: false },
+      tooltip: { ...tooltip, callbacks: { label: c => ` ~${Math.round(c.parsed.x).toLocaleString('en')} lost orders` } } },
+      scales: { x: { grid: { color: grid }, border: { display: false }, ticks: { color: muted } },
+                y: { grid: { display: false }, border: { color: css('--axis') }, ticks: { color: ink2 } } } } }));
+
+  const startLine = { id: 'startLine', afterDatasetsDraw(chart) {
+    const x = chart.scales.x.getPixelForValue(D.exp.start_idx - 0.5), { top, bottom } = chart.chartArea, ctx = chart.ctx;
+    ctx.save(); ctx.setLineDash([4, 4]); ctx.strokeStyle = muted; ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.moveTo(x, top); ctx.lineTo(x, bottom); ctx.stroke();
+    ctx.setLineDash([]); ctx.fillStyle = ink2; ctx.font = '12px system-ui'; ctx.fillText('Experiment starts', x + 6, top + 12);
+    ctx.restore(); } };
+  charts.push(new Chart(expChart, { type: 'line',
+    data: { labels: D.exp.weeks, datasets: [
+      { label: 'Test hubs', data: D.exp.test, borderColor: S[0], backgroundColor: S[0] },
+      { label: 'Control hubs', data: D.exp.control, borderColor: S[1], backgroundColor: S[1] }
+    ].map(d => ({ ...d, borderWidth: 2, pointRadius: 4, pointHoverRadius: 6, pointBorderColor: surface, pointBorderWidth: 2, tension: 0.25 })) },
+    options: { maintainAspectRatio: false, interaction: { mode: 'index', intersect: false },
+      plugins: { legend, tooltip: { ...tooltip, callbacks: { label: c => ` ${c.dataset.label}: ${c.parsed.y.toFixed(1)} orders` } } },
+      scales: axes('Orders per hub-day') }, plugins: [startLine] }));
+}
+draw();
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', draw);
+</script>
+</body>
+</html>

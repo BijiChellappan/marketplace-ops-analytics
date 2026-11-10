@@ -1,0 +1,10 @@
+*Marketplace catalog & availability check - 2026-11-10*
+59 issues found (18 high, 16 medium, 25 low)
+
+- [HIGH] DELISTED_STILL_LIVE: 6 -> Catalog team
+- [HIGH] PHANTOM_STOCK: 12 -> Partner integration (stock feed)
+- [MEDIUM] MISSING_LISTING: 7 -> Catalog team
+- [MEDIUM] PRICE_MISMATCH: 9 -> Commercial / pricing
+- [LOW] HIDDEN_STOCK: 25 -> Partner integration (stock feed)
+
+Pattern: 12 of 12 phantom-stock items are MUC-02 on MP-C - likely a stock-feed sync problem, not single items. Escalate to partner.

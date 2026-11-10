@@ -1,0 +1,60 @@
+severity,issue_type,marketplace_id,hub_id,sku,product_name,detail,owner
+high,DELISTED_STILL_LIVE,MP-C,,SKU-0021,Blueberries M,"delisted in master, still live",Catalog team
+high,DELISTED_STILL_LIVE,MP-C,,SKU-0029,Spinach XL,"delisted in master, still live",Catalog team
+high,DELISTED_STILL_LIVE,MP-C,,SKU-0105,Kombucha S,"delisted in master, still live",Catalog team
+high,DELISTED_STILL_LIVE,MP-C,,SKU-0113,Crisps S,"delisted in master, still live",Catalog team
+high,DELISTED_STILL_LIVE,MP-C,,SKU-0162,Laundry Pods S,"delisted in master, still live",Catalog team
+high,DELISTED_STILL_LIVE,MP-C,,SKU-0177,Sponges XL,"delisted in master, still live",Catalog team
+high,PHANTOM_STOCK,MP-C,MUC-02,SKU-0017,Carrots S,"shown available, hub stock = 0",Partner integration (stock feed)
+high,PHANTOM_STOCK,MP-C,MUC-02,SKU-0045,Mozzarella M,"shown available, hub stock = 0",Partner integration (stock feed)
+high,PHANTOM_STOCK,MP-C,MUC-02,SKU-0048,Skyr S,"shown available, hub stock = 0",Partner integration (stock feed)
+high,PHANTOM_STOCK,MP-C,MUC-02,SKU-0070,Pretzels S,"shown available, hub stock = 0",Partner integration (stock feed)
+high,PHANTOM_STOCK,MP-C,MUC-02,SKU-0072,Pretzels L,"shown available, hub stock = 0",Partner integration (stock feed)
+high,PHANTOM_STOCK,MP-C,MUC-02,SKU-0082,Ciabatta S,"shown available, hub stock = 0",Partner integration (stock feed)
+high,PHANTOM_STOCK,MP-C,MUC-02,SKU-0102,Cold Brew S,"shown available, hub stock = 0",Partner integration (stock feed)
+high,PHANTOM_STOCK,MP-C,MUC-02,SKU-0132,Popcorn S,"shown available, hub stock = 0",Partner integration (stock feed)
+high,PHANTOM_STOCK,MP-C,MUC-02,SKU-0149,Fish Fingers S,"shown available, hub stock = 0",Partner integration (stock feed)
+high,PHANTOM_STOCK,MP-C,MUC-02,SKU-0157,Toilet Paper M,"shown available, hub stock = 0",Partner integration (stock feed)
+high,PHANTOM_STOCK,MP-C,MUC-02,SKU-0160,Dish Soap L,"shown available, hub stock = 0",Partner integration (stock feed)
+high,PHANTOM_STOCK,MP-C,MUC-02,SKU-0161,Dish Soap XL,"shown available, hub stock = 0",Partner integration (stock feed)
+medium,MISSING_LISTING,MP-A,,SKU-0081,Wraps XL,"active in master, not live on marketplace",Catalog team
+medium,MISSING_LISTING,MP-A,,SKU-0088,Cola S,"active in master, not live on marketplace",Catalog team
+medium,MISSING_LISTING,MP-A,,SKU-0123,Salted Nuts M,"active in master, not live on marketplace",Catalog team
+medium,MISSING_LISTING,MP-A,,SKU-0139,Pizza Margherita L,"active in master, not live on marketplace",Catalog team
+medium,MISSING_LISTING,MP-A,,SKU-0151,Veggie Burgers S,"active in master, not live on marketplace",Catalog team
+medium,MISSING_LISTING,MP-A,,SKU-0175,Sponges M,"active in master, not live on marketplace",Catalog team
+medium,MISSING_LISTING,MP-A,,SKU-0193,Salami L,"active in master, not live on marketplace",Catalog team
+medium,PRICE_MISMATCH,MP-B,,SKU-0045,Mozzarella M,master EUR 5.52 vs listed EUR 4.92 (-10.9%),Commercial / pricing
+medium,PRICE_MISMATCH,MP-B,,SKU-0047,Mozzarella XL,master EUR 7.75 vs listed EUR 7.09 (-8.5%),Commercial / pricing
+medium,PRICE_MISMATCH,MP-B,,SKU-0063,Sourdough Bread L,master EUR 3.23 vs listed EUR 2.81 (-13.0%),Commercial / pricing
+medium,PRICE_MISMATCH,MP-B,,SKU-0085,Sparkling Water M,master EUR 9.78 vs listed EUR 8.29 (-15.2%),Commercial / pricing
+medium,PRICE_MISMATCH,MP-B,,SKU-0100,Beer 6-Pack S,master EUR 5.88 vs listed EUR 4.97 (-15.5%),Commercial / pricing
+medium,PRICE_MISMATCH,MP-B,,SKU-0117,Dark Chocolate L,master EUR 6.45 vs listed EUR 5.82 (-9.8%),Commercial / pricing
+medium,PRICE_MISMATCH,MP-B,,SKU-0146,Frozen Berries M,master EUR 4.66 vs listed EUR 4.24 (-9.0%),Commercial / pricing
+medium,PRICE_MISMATCH,MP-B,,SKU-0148,Frozen Berries XL,master EUR 6.77 vs listed EUR 5.63 (-16.8%),Commercial / pricing
+medium,PRICE_MISMATCH,MP-B,,SKU-0181,Minced Beef M,master EUR 8.44 vs listed EUR 6.98 (-17.3%),Commercial / pricing
+low,HIDDEN_STOCK,MP-A,BER-02,SKU-0147,Frozen Berries L,"hub stock 31 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-A,BER-03,SKU-0178,Chicken Breast S,"hub stock 26 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-A,HAM-03,SKU-0046,Mozzarella L,"hub stock 26 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-A,HAM-04,SKU-0186,Ham Slices S,"hub stock 21 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-A,MUC-02,SKU-0140,Pizza Margherita XL,"hub stock 29 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-A,MUC-03,SKU-0184,Salmon Fillet L,"hub stock 30 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-B,BER-01,SKU-0007,Tomatoes S,"hub stock 25 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-B,BER-01,SKU-0110,Lemonade S,"hub stock 28 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-B,BER-03,SKU-0123,Salted Nuts M,"hub stock 26 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-B,BER-03,SKU-0127,Protein Bar M,"hub stock 24 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-B,BER-05,SKU-0027,Spinach M,"hub stock 26 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-B,HAM-01,SKU-0030,Potatoes S,"hub stock 29 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-B,HAM-01,SKU-0129,Protein Bar XL,"hub stock 29 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-B,HAM-02,SKU-0031,Potatoes M,"hub stock 40 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-B,MUC-01,SKU-0167,Kitchen Roll M,"hub stock 26 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-C,BER-04,SKU-0011,Avocados S,"hub stock 26 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-C,BER-04,SKU-0085,Sparkling Water M,"hub stock 27 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-C,BER-04,SKU-0116,Dark Chocolate M,"hub stock 23 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-C,BER-05,SKU-0187,Ham Slices M,"hub stock 35 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-C,HAM-03,SKU-0156,Toilet Paper S,"hub stock 37 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-C,HAM-04,SKU-0098,Energy Drink L,"hub stock 29 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-C,HAM-04,SKU-0171,Bin Bags M,"hub stock 21 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-C,MUC-02,SKU-0101,Beer 6-Pack M,"hub stock 29 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-C,MUC-02,SKU-0115,Dark Chocolate S,"hub stock 25 units, hidden on marketplace",Partner integration (stock feed)
+low,HIDDEN_STOCK,MP-C,MUC-03,SKU-0094,Iced Tea L,"hub stock 24 units, hidden on marketplace",Partner integration (stock feed)

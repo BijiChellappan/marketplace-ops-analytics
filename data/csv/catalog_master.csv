@@ -1,0 +1,194 @@
+sku,product_name,category,price_eur,is_active
+SKU-0001,Bananas S,Fruit & Veg,2.48,1
+SKU-0002,Bananas M,Fruit & Veg,5.39,1
+SKU-0003,Apples S,Fruit & Veg,3.41,1
+SKU-0004,Apples M,Fruit & Veg,1.67,1
+SKU-0005,Apples L,Fruit & Veg,7.5,0
+SKU-0006,Apples XL,Fruit & Veg,7.46,1
+SKU-0007,Tomatoes S,Fruit & Veg,1.36,1
+SKU-0008,Tomatoes M,Fruit & Veg,3.4,1
+SKU-0009,Tomatoes L,Fruit & Veg,3.8,1
+SKU-0010,Tomatoes XL,Fruit & Veg,8.68,1
+SKU-0011,Avocados S,Fruit & Veg,3.22,1
+SKU-0012,Avocados M,Fruit & Veg,5.21,1
+SKU-0013,Avocados L,Fruit & Veg,4.24,1
+SKU-0014,Avocados XL,Fruit & Veg,3.52,1
+SKU-0015,Cucumbers S,Fruit & Veg,1.13,1
+SKU-0016,Cucumbers M,Fruit & Veg,5.24,1
+SKU-0017,Carrots S,Fruit & Veg,3.17,1
+SKU-0018,Carrots M,Fruit & Veg,4.9,1
+SKU-0019,Carrots L,Fruit & Veg,3.7,1
+SKU-0020,Blueberries S,Fruit & Veg,4.12,1
+SKU-0021,Blueberries M,Fruit & Veg,5.0,0
+SKU-0022,Lemons S,Fruit & Veg,1.6,1
+SKU-0023,Lemons M,Fruit & Veg,3.48,1
+SKU-0024,Lemons L,Fruit & Veg,1.8,1
+SKU-0025,Lemons XL,Fruit & Veg,2.98,1
+SKU-0026,Spinach S,Fruit & Veg,3.58,1
+SKU-0027,Spinach M,Fruit & Veg,5.92,1
+SKU-0028,Spinach L,Fruit & Veg,3.52,1
+SKU-0029,Spinach XL,Fruit & Veg,4.58,0
+SKU-0030,Potatoes S,Fruit & Veg,2.59,1
+SKU-0031,Potatoes M,Fruit & Veg,2.14,1
+SKU-0032,Potatoes L,Fruit & Veg,2.33,1
+SKU-0033,Potatoes XL,Fruit & Veg,5.36,1
+SKU-0034,Whole Milk S,Dairy,3.65,1
+SKU-0035,Whole Milk M,Dairy,3.73,1
+SKU-0036,Oat Drink S,Dairy,4.26,1
+SKU-0037,Oat Drink M,Dairy,5.08,1
+SKU-0038,Greek Yogurt S,Dairy,4.26,1
+SKU-0039,Greek Yogurt M,Dairy,5.61,1
+SKU-0040,Butter S,Dairy,2.57,1
+SKU-0041,Butter M,Dairy,2.96,1
+SKU-0042,Gouda S,Dairy,1.63,1
+SKU-0043,Gouda M,Dairy,2.51,1
+SKU-0044,Mozzarella S,Dairy,1.13,1
+SKU-0045,Mozzarella M,Dairy,5.52,1
+SKU-0046,Mozzarella L,Dairy,6.16,1
+SKU-0047,Mozzarella XL,Dairy,7.75,1
+SKU-0048,Skyr S,Dairy,2.84,1
+SKU-0049,Skyr M,Dairy,4.4,1
+SKU-0050,Cream Cheese S,Dairy,1.63,1
+SKU-0051,Cream Cheese M,Dairy,2.07,1
+SKU-0052,Cream Cheese L,Dairy,6.19,1
+SKU-0053,Cream Cheese XL,Dairy,5.92,1
+SKU-0054,Eggs (10) S,Dairy,4.01,1
+SKU-0055,Eggs (10) M,Dairy,4.74,1
+SKU-0056,Eggs (10) L,Dairy,5.45,1
+SKU-0057,Eggs (10) XL,Dairy,6.61,1
+SKU-0058,Feta S,Dairy,2.26,1
+SKU-0059,Feta M,Dairy,1.64,1
+SKU-0060,Feta L,Dairy,4.69,1
+SKU-0061,Sourdough Bread S,Bakery,2.43,1
+SKU-0062,Sourdough Bread M,Bakery,5.08,1
+SKU-0063,Sourdough Bread L,Bakery,3.23,1
+SKU-0064,Sourdough Bread XL,Bakery,2.82,1
+SKU-0065,Croissants S,Bakery,2.04,1
+SKU-0066,Croissants M,Bakery,2.81,1
+SKU-0067,Toast Bread S,Bakery,2.87,1
+SKU-0068,Toast Bread M,Bakery,4.79,1
+SKU-0069,Toast Bread L,Bakery,5.43,1
+SKU-0070,Pretzels S,Bakery,2.42,1
+SKU-0071,Pretzels M,Bakery,4.92,1
+SKU-0072,Pretzels L,Bakery,2.89,1
+SKU-0073,Rye Bread S,Bakery,1.47,1
+SKU-0074,Rye Bread M,Bakery,4.55,1
+SKU-0075,Rye Bread L,Bakery,4.4,1
+SKU-0076,Bagels S,Bakery,1.68,1
+SKU-0077,Bagels M,Bakery,3.65,1
+SKU-0078,Wraps S,Bakery,3.29,1
+SKU-0079,Wraps M,Bakery,3.43,1
+SKU-0080,Wraps L,Bakery,3.98,1
+SKU-0081,Wraps XL,Bakery,4.31,1
+SKU-0082,Ciabatta S,Bakery,3.09,1
+SKU-0083,Ciabatta M,Bakery,3.09,1
+SKU-0084,Sparkling Water S,Drinks,1.59,1
+SKU-0085,Sparkling Water M,Drinks,9.78,1
+SKU-0086,Sparkling Water L,Drinks,11.71,1
+SKU-0087,Sparkling Water XL,Drinks,11.25,1
+SKU-0088,Cola S,Drinks,2.58,1
+SKU-0089,Cola M,Drinks,9.85,1
+SKU-0090,Orange Juice S,Drinks,5.6,1
+SKU-0091,Orange Juice M,Drinks,5.14,1
+SKU-0092,Iced Tea S,Drinks,2.62,1
+SKU-0093,Iced Tea M,Drinks,1.95,0
+SKU-0094,Iced Tea L,Drinks,11.64,1
+SKU-0095,Iced Tea XL,Drinks,7.9,1
+SKU-0096,Energy Drink S,Drinks,2.85,1
+SKU-0097,Energy Drink M,Drinks,6.32,1
+SKU-0098,Energy Drink L,Drinks,3.37,1
+SKU-0099,Energy Drink XL,Drinks,13.41,1
+SKU-0100,Beer 6-Pack S,Drinks,5.88,1
+SKU-0101,Beer 6-Pack M,Drinks,7.59,1
+SKU-0102,Cold Brew S,Drinks,5.0,1
+SKU-0103,Cold Brew M,Drinks,6.36,1
+SKU-0104,Cold Brew L,Drinks,8.76,1
+SKU-0105,Kombucha S,Drinks,1.37,0
+SKU-0106,Kombucha M,Drinks,4.84,1
+SKU-0107,Kombucha L,Drinks,1.83,1
+SKU-0108,Still Water S,Drinks,3.01,1
+SKU-0109,Still Water M,Drinks,2.39,1
+SKU-0110,Lemonade S,Drinks,1.49,1
+SKU-0111,Lemonade M,Drinks,6.4,1
+SKU-0112,Lemonade L,Drinks,3.3,1
+SKU-0113,Crisps S,Snacks,2.81,0
+SKU-0114,Crisps M,Snacks,2.97,1
+SKU-0115,Dark Chocolate S,Snacks,2.84,1
+SKU-0116,Dark Chocolate M,Snacks,1.84,1
+SKU-0117,Dark Chocolate L,Snacks,6.45,1
+SKU-0118,Dark Chocolate XL,Snacks,5.24,1
+SKU-0119,Gummy Bears S,Snacks,1.52,1
+SKU-0120,Gummy Bears M,Snacks,3.46,1
+SKU-0121,Gummy Bears L,Snacks,4.38,1
+SKU-0122,Salted Nuts S,Snacks,3.74,0
+SKU-0123,Salted Nuts M,Snacks,3.76,1
+SKU-0124,Salted Nuts L,Snacks,4.3,1
+SKU-0125,Salted Nuts XL,Snacks,4.09,1
+SKU-0126,Protein Bar S,Snacks,2.65,1
+SKU-0127,Protein Bar M,Snacks,3.3,1
+SKU-0128,Protein Bar L,Snacks,2.31,1
+SKU-0129,Protein Bar XL,Snacks,7.07,1
+SKU-0130,Biscuits S,Snacks,3.63,1
+SKU-0131,Biscuits M,Snacks,2.25,1
+SKU-0132,Popcorn S,Snacks,1.58,1
+SKU-0133,Popcorn M,Snacks,4.11,1
+SKU-0134,Rice Cakes S,Snacks,2.03,1
+SKU-0135,Rice Cakes M,Snacks,4.07,1
+SKU-0136,Rice Cakes L,Snacks,5.42,1
+SKU-0137,Pizza Margherita S,Frozen,2.66,1
+SKU-0138,Pizza Margherita M,Frozen,8.29,1
+SKU-0139,Pizza Margherita L,Frozen,5.42,1
+SKU-0140,Pizza Margherita XL,Frozen,4.84,1
+SKU-0141,Ice Cream S,Frozen,4.59,1
+SKU-0142,Ice Cream M,Frozen,5.12,1
+SKU-0143,Ice Cream L,Frozen,9.81,1
+SKU-0144,Ice Cream XL,Frozen,11.63,1
+SKU-0145,Frozen Berries S,Frozen,6.3,1
+SKU-0146,Frozen Berries M,Frozen,4.66,1
+SKU-0147,Frozen Berries L,Frozen,7.51,1
+SKU-0148,Frozen Berries XL,Frozen,6.77,1
+SKU-0149,Fish Fingers S,Frozen,6.22,1
+SKU-0150,Fish Fingers M,Frozen,3.93,1
+SKU-0151,Veggie Burgers S,Frozen,4.07,1
+SKU-0152,Veggie Burgers M,Frozen,8.73,1
+SKU-0153,Veggie Burgers L,Frozen,10.26,1
+SKU-0154,Frozen Peas S,Frozen,5.42,1
+SKU-0155,Frozen Peas M,Frozen,8.14,1
+SKU-0156,Toilet Paper S,Household,5.34,1
+SKU-0157,Toilet Paper M,Household,5.18,1
+SKU-0158,Dish Soap S,Household,7.21,1
+SKU-0159,Dish Soap M,Household,8.63,1
+SKU-0160,Dish Soap L,Household,7.25,1
+SKU-0161,Dish Soap XL,Household,4.51,1
+SKU-0162,Laundry Pods S,Household,3.44,0
+SKU-0163,Laundry Pods M,Household,11.38,1
+SKU-0164,Laundry Pods L,Household,5.58,1
+SKU-0165,Laundry Pods XL,Household,4.94,1
+SKU-0166,Kitchen Roll S,Household,7.65,1
+SKU-0167,Kitchen Roll M,Household,3.56,1
+SKU-0168,Kitchen Roll L,Household,4.81,1
+SKU-0169,Kitchen Roll XL,Household,12.17,1
+SKU-0170,Bin Bags S,Household,2.95,1
+SKU-0171,Bin Bags M,Household,5.13,1
+SKU-0172,Bin Bags L,Household,12.33,0
+SKU-0173,Bin Bags XL,Household,17.82,1
+SKU-0174,Sponges S,Household,5.21,1
+SKU-0175,Sponges M,Household,3.46,1
+SKU-0176,Sponges L,Household,2.73,1
+SKU-0177,Sponges XL,Household,6.56,0
+SKU-0178,Chicken Breast S,Meat & Fish,6.16,1
+SKU-0179,Chicken Breast M,Meat & Fish,4.26,1
+SKU-0180,Minced Beef S,Meat & Fish,5.23,1
+SKU-0181,Minced Beef M,Meat & Fish,8.44,1
+SKU-0182,Salmon Fillet S,Meat & Fish,3.58,1
+SKU-0183,Salmon Fillet M,Meat & Fish,9.24,1
+SKU-0184,Salmon Fillet L,Meat & Fish,10.82,1
+SKU-0185,Salmon Fillet XL,Meat & Fish,13.31,1
+SKU-0186,Ham Slices S,Meat & Fish,3.21,1
+SKU-0187,Ham Slices M,Meat & Fish,4.28,1
+SKU-0188,Ham Slices L,Meat & Fish,12.77,1
+SKU-0189,Tofu S,Meat & Fish,4.13,1
+SKU-0190,Tofu M,Meat & Fish,6.94,1
+SKU-0191,Salami S,Meat & Fish,6.08,1
+SKU-0192,Salami M,Meat & Fish,10.34,1
+SKU-0193,Salami L,Meat & Fish,6.88,1

@@ -1,0 +1,6 @@
+offline_reason,incident_days,minutes_offline,est_lost_orders,hub_marketplace_pairs,worst_hub,worst_hub_lost_orders
+rider shortage,117,15979,791.0,36,BER-03 on MP-A,65.0
+catalog sync error,105,16005,683.0,35,MUC-02 on MP-C,87.0
+tech outage,53,6934,336.0,30,BER-03 on MP-A,40.0
+hub stock-out,47,6477,308.0,25,BER-03 on MP-A,37.0
+no reason logged,75,2896,129.0,32,BER-04 on MP-A,10.0

@@ -1,0 +1,5 @@
+metric,effect_abs,effect_pct,ci95_low_pct,ci95_high_pct,significant
+Orders per hub-day,6.91,13.6,11.0,16.2,yes
+GMV per hub-day (EUR),282.51,20.3,16.4,24.3,yes
+Average order value (EUR),1.63,6.0,4.0,8.1,yes
+Contribution per hub-day (EUR),2.57,1.3,-2.5,5.8,no

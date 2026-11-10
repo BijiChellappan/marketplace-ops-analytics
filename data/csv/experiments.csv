@@ -1,0 +1,2 @@
+experiment_id,name,marketplace_id,start_date,end_date,test_hubs,discount_eur,basket_threshold_eur
+EXP-2026-09-B1,EUR 3 off baskets over EUR 35,MP-B,2026-09-15,2026-10-31,"BER-01,BER-03,BER-05,HAM-02,HAM-04,MUC-01",3.0,35.0

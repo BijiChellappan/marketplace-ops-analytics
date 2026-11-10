@@ -1,0 +1,13 @@
+hub_id,city,base_daily_orders
+BER-01,Berlin,140
+BER-02,Berlin,120
+BER-03,Berlin,150
+BER-04,Berlin,100
+BER-05,Berlin,130
+HAM-01,Hamburg,115
+HAM-02,Hamburg,125
+HAM-03,Hamburg,95
+HAM-04,Hamburg,105
+MUC-01,Munich,135
+MUC-02,Munich,120
+MUC-03,Munich,110
