@@ -88,7 +88,7 @@ Replace the files in `data/csv/` (same file names and columns) and run `python r
 
 - **Contribution, not GMV, is the success metric:** product margin − marketplace commission − fulfilment cost − discounts. A promotion that grows orders without growing contribution isn't a win.
 - **Difference-in-differences:** comparing test hubs against control hubs, before and during the experiment, removes trends and seasonality that affect both groups.
-- **Cluster bootstrap over hubs:** hubs, not orders, were assigned to test or control, so the confidence interval resamples hubs. Treating 30,000 orders as independent would make the result look far more certain than it is.
+- **Cluster bootstrap over hubs:** hubs, not orders, were assigned to test or control, so the confidence interval resamples hubs. Treating 50,000 orders as independent would make the result look far more certain than it is.
 - **Lost orders estimate:** offline share of the day × the hub's normal daily orders on that marketplace, using days with less than 30 minutes offline as the baseline.
 - **Every issue has an owner:** the automated check routes each issue to a team, so it's actionable rather than just a list.
 
